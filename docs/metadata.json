@@ -1,11 +1,11 @@
 {
   "name": "Hanime Kitty",
   "symbol": "HTV",
-  "description": "Hanime Kitty (HTV) is the community coin of the Hanime.de Discord. Fixed supply of 1,000 HTV, minting locked forever. A fun community token, not an investment.",
+  "description": "Hanime Kitty (HTV) is the community coin of the Hanime.de Discord. Fixed supply of 1,337 HTV, minting locked forever. A fun community token, not an investment.",
   "image": "https://besnipez.github.io/hanime-kitty/logo.png",
   "external_url": "https://besnipez.github.io/hanime-kitty/",
   "attributes": [
-    { "trait_type": "Supply", "value": "1000" },
+    { "trait_type": "Supply", "value": "1337" },
     { "trait_type": "Chain", "value": "Solana" }
   ],
   "properties": {

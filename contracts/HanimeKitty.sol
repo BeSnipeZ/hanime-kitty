@@ -7,7 +7,7 @@ import {ERC20Burnable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 /// Fixed supply: everything is minted once to the deployer. No owner, no mint function,
 /// so nobody can ever create more tokens.
 contract HanimeKitty is ERC20, ERC20Burnable {
-    uint256 public constant MAX_SUPPLY = 1_000 * 10 ** 18;
+    uint256 public constant MAX_SUPPLY = 1_337 * 10 ** 18;
 
     constructor() ERC20("Hanime Kitty", "HTV") {
         _mint(msg.sender, MAX_SUPPLY);

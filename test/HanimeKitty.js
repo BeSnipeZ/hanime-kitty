@@ -17,7 +17,7 @@ describe("HanimeKitty", function () {
 
   it("mints the whole fixed supply to the deployer", async function () {
     const { token, owner } = await deploy();
-    const supply = ethers.parseUnits("1000", 18);
+    const supply = ethers.parseUnits("1337", 18);
     expect(await token.totalSupply()).to.equal(supply);
     expect(await token.balanceOf(owner.address)).to.equal(supply);
   });
@@ -54,7 +54,7 @@ describe("HanimeKitty", function () {
   it("burning lowers the supply and there is no way to mint more", async function () {
     const { token } = await deploy();
     await token.burn(ethers.parseUnits("10", 18));
-    expect(await token.totalSupply()).to.equal(ethers.parseUnits("990", 18));
+    expect(await token.totalSupply()).to.equal(ethers.parseUnits("1327", 18));
     expect(token.mint).to.equal(undefined);
   });
 });
