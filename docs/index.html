@@ -28,6 +28,9 @@
   .box { background:var(--card); border:1px solid #ffffff14; border-radius:16px; padding:20px; text-align:left; margin-bottom:16px; }
   .box h2 { margin:0 0 8px; font-size:1.15rem; color:var(--pink); }
   code { background:#0b0614; padding:8px 10px; border-radius:8px; display:block; overflow-wrap:anywhere; font-size:.9rem; }
+  #qr { display:block; margin:16px auto 0; border-radius:12px; background:#fff; image-rendering:pixelated; }
+  #qr[hidden], #qr-text[hidden] { display:none; }
+  #qr-text { text-align:center; margin-top:8px; }
   button { margin-top:8px; background:var(--pink); color:#1d1233; border:0; border-radius:999px; padding:8px 16px; font-weight:700; cursor:pointer; }
   button:focus-visible { outline:3px solid var(--gold); outline-offset:2px; }
   ol { margin:0; padding-left:20px; }
@@ -51,6 +54,8 @@
     <h2>Coin-Adresse</h2>
     <code id="mint">Start folgt in Kürze</code>
     <button id="copy" type="button" hidden>Adresse kopieren</button>
+    <img id="qr" src="mint-qr.png" alt="QR-Code der Coin-Adresse zum Scannen" width="200" height="200" hidden>
+    <p id="qr-text" class="small" hidden>Mit der Wallet-App scannen, um HTV hinzuzufügen.</p>
   </div>
 
   <div class="box">
@@ -83,6 +88,8 @@
     a.href = d.explorer; a.textContent = d.mint; a.rel = "noopener";
     el.appendChild(a);
     btn.hidden = false;
+    document.getElementById("qr").hidden = false;
+    document.getElementById("qr-text").hidden = false;
     btn.onclick = () => navigator.clipboard.writeText(d.mint).then(() => btn.textContent = "Kopiert!");
   }).catch(() => {});
 </script>

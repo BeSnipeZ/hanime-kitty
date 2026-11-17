@@ -1,27 +1,28 @@
 {
-    "name":  "hanime-kitty",
-    "version":  "1.0.0",
-    "description":  "",
-    "main":  "index.js",
-    "scripts":  {
-                    "test":  "hardhat test",
-                    "test:solana":  "docker run --rm -v \"%cd%:/app\" -w /app node:24-bookworm sh -c \"npm install --no-save --ignore-scripts litesvm-linux-x64-gnu@0.8.0 \u003e/dev/null 2\u003e\u00261; node --test solana/launch.test.js\""
-                },
-    "keywords":  [
-
-                 ],
-    "author":  "",
-    "license":  "ISC",
-    "type":  "commonjs",
-    "devDependencies":  {
-                            "@nomicfoundation/hardhat-toolbox":  "^6.1.2",
-                            "@openzeppelin/contracts":  "^5.6.1",
-                            "hardhat":  "^2.29.2",
-                            "litesvm":  "^0.8.0"
-                        },
-    "dependencies":  {
-                         "@solana/spl-token":  "^0.4.15",
-                         "@solana/spl-token-metadata":  "^0.1.6",
-                         "@solana/web3.js":  "^1.99.0"
-                     }
+    "name": "hanime-kitty",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "hardhat test",
+        "test:solana": "docker run --rm -v \"%cd%:/app\" -w /app node:24-bookworm sh -c \"npm install --no-save --ignore-scripts litesvm-linux-x64-gnu@0.8.0 >/dev/null 2>&1; node --test solana/launch.test.js\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+        "@openzeppelin/contracts": "^5.6.1",
+        "hardhat": "^2.29.2",
+        "jsqr": "^1.4.0",
+        "litesvm": "^0.8.0",
+        "pngjs": "^7.0.0",
+        "qrcode": "^1.5.4"
+    },
+    "dependencies": {
+        "@solana/spl-token": "^0.4.15",
+        "@solana/spl-token-metadata": "^0.1.6",
+        "@solana/web3.js": "^1.99.0"
+    }
 }

@@ -95,7 +95,11 @@ async function main(net) {
     explorer: `https://explorer.solana.com/address/${mint.publicKey.toBase58()}${cluster}`,
   };
   fs.writeFileSync(resultFile, JSON.stringify(result, null, 2));
-  if (net === "mainnet") fs.writeFileSync(path.join(__dirname, "..", "docs", "mint.json"), JSON.stringify(result, null, 2));
+  if (net === "mainnet") {
+    const docs = path.join(__dirname, "..", "docs");
+    await require("./qr").addressQr(result.mint, path.join(docs, "mint-qr.png"));
+    fs.writeFileSync(path.join(docs, "mint.json"), JSON.stringify(result, null, 2));
+  }
   console.log(result);
 }
 
