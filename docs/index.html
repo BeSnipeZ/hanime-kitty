@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hanime Kitty (HTV)</title>
+<meta name="description" content="Hanime Kitty (HTV): der Community-Coin vom Hanime.de-Discord. 1.000 Stück, für immer fest.">
+<meta property="og:title" content="Hanime Kitty (HTV)">
+<meta property="og:description" content="Der Community-Coin vom Hanime.de-Discord. 1.000 Stück, für immer fest.">
+<meta property="og:image" content="https://besnipez.github.io/hanime-kitty/logo.png">
+<link rel="icon" href="logo.png">
+<style>
+  :root { --bg:#120a20; --card:#1d1233; --text:#fdf2f8; --muted:#c4b5d6; --pink:#f472b6; --gold:#fbbf24; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:radial-gradient(1200px 600px at 50% -10%, #3b1d5e, var(--bg)); color:var(--text);
+         font:16px/1.6 "Segoe UI", system-ui, sans-serif; min-height:100vh; }
+  main { max-width:760px; margin:0 auto; padding:48px 16px 64px; text-align:center; }
+  .logo { width:min(240px,60vw); filter:drop-shadow(0 12px 40px #f472b655); animation:float 5s ease-in-out infinite; }
+  @keyframes float { 50% { transform:translateY(-10px) rotate(-2deg); } }
+  @media (prefers-reduced-motion: reduce) { .logo { animation:none; } }
+  h1 { font-size:clamp(2rem,6vw,3.2rem); margin:16px 0 4px; letter-spacing:.02em;
+       background:linear-gradient(90deg,var(--gold),var(--pink)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .tag { color:var(--muted); margin:0 0 32px; }
+  .facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:32px; }
+  .fact { background:var(--card); border:1px solid #ffffff14; border-radius:16px; padding:16px; }
+  .fact b { display:block; font-size:1.5rem; color:var(--gold); }
+  .fact span { color:var(--muted); font-size:.9rem; }
+  .box { background:var(--card); border:1px solid #ffffff14; border-radius:16px; padding:20px; text-align:left; margin-bottom:16px; }
+  .box h2 { margin:0 0 8px; font-size:1.15rem; color:var(--pink); }
+  code { background:#0b0614; padding:8px 10px; border-radius:8px; display:block; overflow-wrap:anywhere; font-size:.9rem; }
+  button { margin-top:8px; background:var(--pink); color:#1d1233; border:0; border-radius:999px; padding:8px 16px; font-weight:700; cursor:pointer; }
+  button:focus-visible { outline:3px solid var(--gold); outline-offset:2px; }
+  ol { margin:0; padding-left:20px; }
+  .small { color:var(--muted); font-size:.85rem; margin-top:32px; }
+  a { color:var(--gold); }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.png" alt="Hanime Kitty Logo: Catgirl mit blonden Haaren und pinken Spitzen auf einer goldenen Münze">
+  <h1>Hanime Kitty</h1>
+  <p class="tag">HTV · der Community-Coin vom Hanime.de-Discord</p>
+
+  <div class="facts">
+    <div class="fact"><b>1.000</b><span>HTV insgesamt</span></div>
+    <div class="fact"><b>0</b><span>können je nachgeprägt werden</span></div>
+    <div class="fact"><b>Solana</b><span>Blockchain</span></div>
+  </div>
+
+  <div class="box">
+    <h2>Coin-Adresse</h2>
+    <code id="mint">Start folgt in Kürze</code>
+    <button id="copy" type="button" hidden>Adresse kopieren</button>
+  </div>
+
+  <div class="box">
+    <h2>HTV in die Wallet holen</h2>
+    <ol>
+      <li>Phantom oder Solflare installieren (App oder Browser).</li>
+      <li>Coin-Adresse oben kopieren und in der Wallet unter „Token hinzufügen“ einfügen.</li>
+      <li>HTV gibt es im Discord oder später über einen Tauschpool.</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h2>Warum man HTV vertrauen kann</h2>
+    <ol>
+      <li>Die Menge ist fest: Das Recht zum Nachprägen ist gelöscht, auch für die Gründer.</li>
+      <li>Niemand kann Konten einfrieren oder Coins aus fremden Wallets nehmen.</li>
+      <li>Der ganze Code ist öffentlich und getestet.</li>
+    </ol>
+  </div>
+
+  <p class="small">HTV ist ein Spaß-Coin für die Community, keine Geldanlage und kein Gewinnversprechen.</p>
+</main>
+<script>
+  // Filled in after the mainnet launch from mint.json; the page works without it.
+  fetch("mint.json").then(r => r.ok ? r.json() : null).then(d => {
+    if (!d || !d.mint) return;
+    const el = document.getElementById("mint"), btn = document.getElementById("copy");
+    el.innerHTML = "";
+    const a = document.createElement("a");
+    a.href = d.explorer; a.textContent = d.mint; a.rel = "noopener";
+    el.appendChild(a);
+    btn.hidden = false;
+    btn.onclick = () => navigator.clipboard.writeText(d.mint).then(() => btn.textContent = "Kopiert!");
+  }).catch(() => {});
+</script>
+</body>
+</html>

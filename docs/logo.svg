@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#ffe4f1"/>
+      <stop offset="0.6" stop-color="#f9a8d4"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fef3c7"/>
+      <stop offset="0.5" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff7c2"/>
+      <stop offset="0.45" stop-color="#fcd34d"/>
+      <stop offset="0.75" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="bangs" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff7c2"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff1e8"/>
+      <stop offset="1" stop-color="#ffe0d2"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="50%" cy="65%" r="60%">
+      <stop offset="0" stop-color="#fda4af"/>
+      <stop offset="0.6" stop-color="#e11d48"/>
+      <stop offset="1" stop-color="#7f1d1d"/>
+    </radialGradient>
+    <clipPath id="coin"><circle cx="256" cy="256" r="222"/></clipPath>
+    <g id="petal"><path d="M0 -14 C7 -14 10 -6 6 0 L0 8 L-6 0 C-10 -6 -7 -14 0 -14 Z" fill="#fff" opacity="0.85"/></g>
+    <g id="blossom">
+      <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+      <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+      <circle r="3.5" fill="#f59e0b"/>
+    </g>
+  </defs>
+
+  <circle cx="256" cy="256" r="248" fill="url(#rim)"/>
+  <circle cx="256" cy="256" r="222" fill="url(#bg)"/>
+
+  <g clip-path="url(#coin)">
+    <use href="#blossom" transform="translate(92 190) scale(1.3)"/>
+    <use href="#blossom" transform="translate(424 210) scale(1.1) rotate(20)"/>
+    <use href="#blossom" transform="translate(110 330) scale(0.8)"/>
+    <use href="#blossom" transform="translate(410 120) scale(0.7)"/>
+
+    <!-- long hair behind -->
+    <path d="M150 170 Q140 300 120 470 L210 470 Q200 360 206 300 L306 300 Q312 360 302 470 L392 470 Q372 300 362 170 Z"
+          fill="url(#hair)" stroke="#9a3412" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- shoulders and top -->
+    <path d="M150 470 Q160 390 256 382 Q352 390 362 470 Z" fill="#1f1235"/>
+    <path d="M218 382 L256 430 L294 382" fill="none" stroke="#f472b6" stroke-width="5"/>
+    <!-- neck + choker -->
+    <path d="M232 320 L232 384 Q256 396 280 384 L280 320 Z" fill="url(#skin)"/>
+    <rect x="228" y="350" width="56" height="11" rx="5" fill="#111827"/>
+    <circle cx="256" cy="366" r="7" fill="#f472b6" stroke="#111827" stroke-width="2"/>
+
+    <!-- cat ears -->
+    <path d="M168 168 L176 70 L238 128 Z" fill="url(#bangs)" stroke="#9a3412" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M184 140 L188 96 L220 128 Z" fill="#f9a8d4"/>
+    <path d="M344 168 L336 70 L274 128 Z" fill="url(#bangs)" stroke="#9a3412" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M328 140 L324 96 L292 128 Z" fill="#f9a8d4"/>
+
+    <!-- face -->
+    <path d="M176 200 Q174 286 222 318 Q256 340 290 318 Q338 286 336 200 Q256 168 176 200 Z"
+          fill="url(#skin)" stroke="#9a3412" stroke-width="4"/>
+
+    <!-- earrings -->
+    <circle cx="180" cy="270" r="6" fill="none" stroke="#fbbf24" stroke-width="3"/>
+    <circle cx="332" cy="270" r="6" fill="none" stroke="#fbbf24" stroke-width="3"/>
+    <circle cx="332" cy="284" r="3" fill="#f472b6"/>
+
+    <!-- head top hair + bangs -->
+    <path d="M150 196 Q148 112 256 106 Q364 112 362 196
+             L340 232 L326 196 L304 226 L292 186 L270 222 L258 182 L240 220 L226 186 L208 228 L196 194 L172 234 Z"
+          fill="url(#bangs)" stroke="#9a3412" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M200 140 Q240 124 270 132" stroke="#fff" stroke-opacity="0.7" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- side locks with pink tips -->
+    <path d="M168 200 Q156 260 170 330 Q182 300 186 250 Z" fill="url(#hair)" stroke="#9a3412" stroke-width="3"/>
+    <path d="M344 200 Q356 260 342 330 Q330 300 326 250 Z" fill="url(#hair)" stroke="#9a3412" stroke-width="3"/>
+
+    <!-- brows -->
+    <path d="M200 236 Q218 228 236 234" stroke="#b45309" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M276 234 Q294 228 312 236" stroke="#b45309" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- left eye -->
+    <ellipse cx="220" cy="268" rx="19" ry="24" fill="#fff"/>
+    <ellipse cx="220" cy="271" rx="15" ry="21" fill="url(#iris)"/>
+    <ellipse cx="220" cy="273" rx="6" ry="9" fill="#3b0a17"/>
+    <circle cx="214" cy="262" r="5.5" fill="#fff"/>
+    <circle cx="226" cy="282" r="2.5" fill="#fff"/>
+    <path d="M196 254 Q220 238 244 252" stroke="#1f1235" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M242 250 L250 244" stroke="#1f1235" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- right eye: wink -->
+    <path d="M272 270 Q292 256 314 270" stroke="#1f1235" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M310 266 L318 260" stroke="#1f1235" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- blush, nose, mouth -->
+    <ellipse cx="204" cy="298" rx="15" ry="7" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="308" cy="298" rx="15" ry="7" fill="#fb7185" opacity="0.55"/>
+    <path d="M254 290 L258 292" stroke="#d97757" stroke-width="3" stroke-linecap="round"/>
+    <path d="M240 306 Q256 326 272 306 Z" fill="#be123c" stroke="#7f1d1d" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M247 314 Q256 320 265 314" fill="#fda4af"/>
+    <path d="M262 307 L265 313 L268 307" fill="#fff"/>
+  </g>
+
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="3"/>
+
+  <!-- ticker ribbon -->
+  <rect x="166" y="414" width="180" height="58" rx="29" fill="#1f1235" stroke="#fde68a" stroke-width="4"/>
+  <text x="256" y="457" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="900"
+        font-size="40" letter-spacing="6" fill="#fff">HTV</text>
+</svg>
