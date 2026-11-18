@@ -1,0 +1,10 @@
+{
+  "network": "mainnet",
+  "mint": "8iHdvKegRMBHwLFmBwx4JPWPN23i9kmREjyiLcMMSQQK",
+  "wallet": "5EfrLc2bzc4d2htr8pTk2xzZ2d6RMzaydWA7sDK4J1ig",
+  "tokenAccount": "CheV7YtQdywvZLuu65iit2j3BZKFrVkq7JUsoxu8HbgP",
+  "supply": "10000",
+  "decimals": 9,
+  "signature": "65uLgffAsuE5Kdrh5uYxyqFnLb5km1PuWzy8aAg7etwfkoQBz4NKt7BzVcV5bDrGyrRVkVr36GpAFRYwoMPDLiDL",
+  "explorer": "https://explorer.solana.com/address/8iHdvKegRMBHwLFmBwx4JPWPN23i9kmREjyiLcMMSQQK"
+}
