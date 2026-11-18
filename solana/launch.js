@@ -1,4 +1,4 @@
-// Creates Hanime Kitty (HTV) as a Token-2022 mint with on-chain metadata,
+﻿// Creates Hanime Kitty (HTV) as a Token-2022 mint with on-chain metadata,
 // mints the fixed supply to the wallet and removes the mint authority for good.
 // Everything happens in ONE transaction: it either fully succeeds or costs nothing but the fee.
 // Usage: node solana/launch.js devnet|mainnet
@@ -20,7 +20,7 @@ const NAME = "Hanime Kitty";
 const SYMBOL = "HTV";
 const URI = "https://besnipez.github.io/hanime-kitty/metadata.json";
 const DECIMALS = 9;
-const SUPPLY = 1_337n;
+const SUPPLY = 10_000n;
 const RAW_SUPPLY = SUPPLY * 10n ** BigInt(DECIMALS);
 
 // Mint account size: the mint grows from mintLen to mintLen + metaLen when the metadata is written,
