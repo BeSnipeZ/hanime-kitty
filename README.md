@@ -1,7 +1,7 @@
 # Hanime Kitty (HTV)
 
 ERC-20 token on Base, and the same token on Solana (Token-2022, `solana/launch.js`).
-Fixed supply of 1,337 HTV, minted once to the deployer.
+Fixed supply of 10,000 HTV, minted once to the deployer.
 No owner and no mint function; holders can burn their own tokens.
 
 ## Commands
@@ -10,7 +10,7 @@ No owner and no mint function; holders can burn their own tokens.
 npm install
 npm test                   # Base contract (Hardhat)
 npm run test:solana        # Solana launch in LiteSVM; runs in Docker (no Windows build of LiteSVM)
-node solana/launch.js devnet|mainnet   # one transaction: create, mint 1,337 HTV, lock minting
+node solana/launch.js devnet|mainnet   # one transaction: create, mint 10,000 HTV, lock minting
 npx hardhat run scripts/deploy.js --network baseSepolia   # testnet
 npx hardhat run scripts/deploy.js --network base          # mainnet, real ETH
 ```
