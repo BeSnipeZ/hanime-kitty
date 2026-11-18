@@ -63,7 +63,7 @@
     <ol>
       <li>Phantom oder Solflare installieren (App oder Browser).</li>
       <li>Coin-Adresse oben kopieren und in der Wallet unter „Token hinzufügen“ einfügen.</li>
-      <li>HTV gibt es im Discord oder später über einen Tauschpool.</li>
+      <li>HTV kaufen: <a id="jup" href="https://jup.ag/" rel="noopener">auf Jupiter mit SOL tauschen</a> (Pool Meteora HTV/SOL).</li>
     </ol>
   </div>
 
@@ -87,6 +87,7 @@
     const a = document.createElement("a");
     a.href = d.explorer; a.textContent = d.mint; a.rel = "noopener";
     el.appendChild(a);
+    document.getElementById("jup").href = "https://jup.ag/swap/SOL-" + d.mint;
     btn.hidden = false;
     document.getElementById("qr").hidden = false;
     document.getElementById("qr-text").hidden = false;
