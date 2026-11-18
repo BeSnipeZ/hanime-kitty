@@ -20,7 +20,7 @@ const NAME = "Hanime Kitty";
 const SYMBOL = "HTV";
 const URI = "https://besnipez.github.io/hanime-kitty/metadata.json";
 const DECIMALS = 9;
-const SUPPLY = 164n;
+const SUPPLY = 10_000n;
 const RAW_SUPPLY = SUPPLY * 10n ** BigInt(DECIMALS);
 
 // Mint account size: the mint grows from mintLen to mintLen + metaLen when the metadata is written,
